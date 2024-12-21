@@ -6,6 +6,8 @@ sources:
       schema: SOURCE_LAYER
       tables:
         - name: STG_EMPL
+        - name: raw_customerdata
+        - name: raw_order
 
 
 
