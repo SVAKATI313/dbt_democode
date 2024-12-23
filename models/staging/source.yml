@@ -8,6 +8,7 @@ sources:
         - name: STG_EMPL
         - name: raw_customerdata
         - name: raw_order
+        - name: raw_product
 
 
 
