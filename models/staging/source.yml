@@ -9,6 +9,12 @@ sources:
         - name: raw_customerdata
         - name: raw_order
         - name: raw_product
+        - name: raw_customers
+        - name : emp
 
 
 
+
+
+
+    
