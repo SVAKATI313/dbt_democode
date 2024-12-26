@@ -1,4 +1,3 @@
-
 version: 2
 sources:
     - name: datafeed_shared_schema
@@ -7,10 +6,21 @@ sources:
       tables:
         - name: STG_EMPL
         - name: raw_customerdata
-        - name: raw_order
         - name: raw_product
         - name: raw_customers
         - name : emp
+        - name : raw_SUPPLIES_DATA
+        - name: raw_order 
+          columns:
+            - name: id   
+              tests:
+                - unique
+                - not_null
+            - name: status  
+              tests:
+                - accepted_values:
+                      values: ['placed', 'shipped', 'completed', 'returned', 'return_pending','not complated']
+
 
 
 
