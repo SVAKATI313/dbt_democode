@@ -9,6 +9,7 @@ sources:
         - name: raw_product
         - name: raw_customers
         - name : emp
+        - name : raw_SUPPLIES_DATA
         - name: raw_order 
           columns:
             - name: id   
