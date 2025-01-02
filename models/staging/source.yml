@@ -1,4 +1,3 @@
-
 version: 2
 sources:
     - name: datafeed_shared_schema
@@ -6,6 +5,66 @@ sources:
       schema: SOURCE_LAYER
       tables:
         - name: STG_EMPL
+        - name: RAW_CUSTOMER_DEMO
+        - name: raw_product
+        - name: raw_customers
+        - name : emp
+        - name : raw_SUPPLIES_DATA
+        - name: raw_order 
+          columns:
+            - name: id   
+              tests:
+                - unique
+                - not_null
+            - name: status  
+              tests:
+                - accepted_values:
+                      values: ['placed', 'shipped']
+        - name: RAW_LINEITEM
+          columns:
+            - name: l_orderkey
+              tests:
+                - not_null
+            - name: l_quantity
+              tests:
+                - not_null
+            - name: l_linenumber
+              tests:
+                - not_null  
+        - name: RAW_NATION
+          columns:
+            - name: n_nationkey
+              tests:
+                - unique
+                - not_null
+            - name: n_name
+              tests:
+                - not_null
+        - name: RAW_ORDER_DEMO
+          columns:
+            - name: o_orderkey
+              tests:
+               - unique
+               - not_null
+
+        - name: raw_customerdata
+          columns:
+           - name: c_custkey
+             tests:
+              - unique
+              - not_null
+           - name: c_name
+             tests:
+               - not_null
+
+               
+ 
 
 
 
+
+
+
+
+
+    
